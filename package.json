@@ -4,7 +4,7 @@
   "description": "Uza.js Web App",
   "scripts": {
     "start": "nodemon --exec ts-node src/server.ts",
-    "test": "jest --forceExit --coverage --verbose",
+    "test": "jest --forceExit --coverage --verbose --detectOpenHandles",
     "watch-test": "npm run test -- --watchAll"
   },
   "repository": {
@@ -18,20 +18,28 @@
   },
   "homepage": "https://github.com/uzajs/uzaweb#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "guid-typescript": "^1.0.7",
     "lodash": "^4.17.11",
+    "reflect-metadata": "^0.1.12",
+    "sqlite3": "^4.0.2",
+    "typeorm": "^0.2.7",
+    "uuid": "^3.3.2",
     "uzajs-inventory": "github:uzajs/inventory",
     "uzajs-sharedkernel": "github:uzajs/sharedkernel"
   },
   "devDependencies": {
+    "@types/body-parser": "^1.17.0",
     "@types/express": "^4.16.0",
+    "@types/faker": "^4.1.4",
     "@types/jest": "^23.3.5",
     "@types/lodash": "^4.14.117",
     "@types/node": "^10.11.7",
+    "@types/sequelize": "^4.27.28",
+    "@types/uuid": "^3.4.4",
     "chai": "^4.2.0",
+    "faker": "^4.1.0",
     "jest": "^23.6.0",
-    "nodemon": "^1.18.4",
     "ts-jest": "^23.10.4",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",

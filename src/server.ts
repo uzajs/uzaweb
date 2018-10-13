@@ -1,7 +1,5 @@
 import app from "./app";
 
-const server =app.listen(app.get("port"),()=>{
-   console.log(`app running on http://localhost:${app.get("port")}`);
+app.listen(3000, () => {
+    console.log("running on http://localhost:3000");
 });
-
-export default server;
