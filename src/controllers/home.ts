@@ -6,8 +6,8 @@ import { CategoryRepository } from "../../../inventory/src/infrastructure/catego
 import { connection } from "../app";
 
 export let index = async (req: Request, res: Response) => {
-    const repo: ICategoryRepository = new CategoryRepository(connection);
-    const cats = await repo.createBatch([new Category("leo")]);
+    const repo: ICategoryRepository = new CategoryRepository(Category, connection);
+    const cats = await repo.getAll();
 
     res.send(`<h1>Welcome to Uza.js</h1> found [${cats.length}] categories:<br> ${cats}`);
 };
